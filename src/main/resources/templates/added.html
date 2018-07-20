@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>succes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">MyImages<br><h6><em>dodaj nowy</em></h6></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/all">Wszystkie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/fav">Ulubione</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <table class="table table-hover table-light">
+        <h1>Obrazek dodany!</h1>
+        <thead>
+        <tr>
+            <th scope="col">Nazwa</th>
+            <th scope="col">Adres</th>
+            <th scope="col">Ulubiony?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td th:text="${mem.name}"></td>
+        <td th:text="${mem.address}"></td>
+        <td th:text="${mem.favourite}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
